@@ -8,6 +8,7 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     name: Upload media to bucket
+    environment: Protected
     steps:
       - name: Checkout
         uses: actions/checkout@v3
