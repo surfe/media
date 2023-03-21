@@ -2,7 +2,7 @@ name: Upload media
 
 on:
   push:
-    branches: [ main, feature/dev-3181-devops-migrate-media-scaleway ]
+    branches: [ main ]
 
 jobs: 
   upload:
@@ -16,8 +16,7 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
-          BUCKET: pictures.dev.surfe.com
-          DIRECTORY: dev
+          BUCKET: media-fh4838dscb6t5828s
           REGION: eu-west-3
         run: |
           aws s3 cp ./media/ s3://${BUCKET}/ --region ${REGION} --recursive
