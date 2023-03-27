@@ -19,4 +19,4 @@ jobs:
           BUCKET: media-fh4838dscb6t5828s
           REGION: eu-west-3
         run: |
-          aws s3 sync ./media/ s3://${BUCKET}/ --region ${REGION}
+          aws s3 sync ./media/ s3://${BUCKET}/ --region ${REGION} --delete
