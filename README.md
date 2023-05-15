@@ -13,3 +13,5 @@ This is our media repository to upload images to S3
 4 - Open a PR
 
 After the PR is merged the github action will automatically upload them to S3
+
+(If you are uploading an image to be used on extension, remember to ask the designers if we should add a `@2x` version to guarantee high quality images on product)
